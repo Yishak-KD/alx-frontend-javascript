@@ -1,7 +1,6 @@
-export default function ngetListStudentIds(a) {
-  if (Array.isArray(a) == false) {
-    return "[]";
+export default function getListStudentIds(a) {
+  if (Array.isArray(a)) {
+    return a.map((item) => item.id);
   }
-  let newt = a.map((item) => item.id);
-  return newt;
+  return "[]";
 }
